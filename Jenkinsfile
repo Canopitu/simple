@@ -15,7 +15,7 @@ pipeline {
              }
           }
        }
-  stage ( 'install stage' )
+    stage ( 'install stage' ) {
        steps {
          withMaven( maven : 'maven') {
          bat 'mvn install'
