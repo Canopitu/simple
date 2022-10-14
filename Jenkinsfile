@@ -5,7 +5,7 @@ Pipeline {
 	
 	     steps {
 	withMaven(maven : 'maven') {
-	              bat 'mvn clean compile'
+	              sh 'mvn clean compile'
 	            }
 	          }
 	        }
@@ -13,7 +13,7 @@ Pipeline {
 
 	        steps {
 	withMaven( maven : 'maven' ) {
-	               bat 'mvn test'
+	               sh 'mvn test'
 	              }
 	            }
 	          }
@@ -21,7 +21,7 @@ Pipeline {
 
 	             steps {
 	withMaven( maven : 'maven' ) {
-	                      bat 'mvn install'
+	                      sh 'mvn install'
 	                     }
 	                    }
 	                  }
