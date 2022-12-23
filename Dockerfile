@@ -13,7 +13,7 @@ COPY . /workspace
 RUN mvn -B package --file pom.xml -DskipTests
 
 FROM tomcat:jre11
-COPY  --from=build /workspace/target/cicd-for-webapp.war /usr/local/tomcat/webapps/
+COPY  --from=build /workspace/target/my-app.war /usr/local/tomcat/webapps/
 EXPOSE 8080
 VOLUME /usr/local/tomcat
 ENTRYPOINT ["catalina.sh", "jpda","run"]
